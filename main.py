@@ -10,7 +10,7 @@ jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), a
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-@app.route("/", methods=['GET'], ['POST'])
+@app.route("/", methods=['GET'])
 def index():
     template = jinja_env.get_template('user-signup.html')
     return template.render()
