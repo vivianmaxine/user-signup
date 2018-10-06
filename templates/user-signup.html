@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block usersignup %}
+
+<div class="content">
+<h1>Become a Member!</h1>
+<form method="POST">
+    <table>
+        <tr>
+            <p><label>
+                <td width="24%">First Name:</td>
+                <td width="28%"><input type="text" name="user_name" id="user_name" value='{{user_name}}' size="20"></td>
+                <td><span class="error">{{name_error}}</span></td>
+            </label></p>
+        </tr>
+        <tr>
+            <p><label>
+                <td width="24%">Password:</td>
+                <td width="28%"><input type="password" name="user_pw" id="user_pw" size="20"></td>
+                <td><span class="error">{{pw_error}}</span>
+                </td>
+            </label></p>
+        </tr>
+        <tr>
+        <tr>
+            <p><label>
+                <td width="24%">Verify Password:</td>
+                <td width="28%"><input type="password" name="user_pw_verify" id="user_pw_verify" size="20"></td>
+                <td><span class="error">{{pw_verify_error}}</span>
+                </td>
+                
+            </label></p>
+        </tr>
+        <tr>
+            <p><label>
+                <td width="24%">Email (Optional):</td>
+                <td width="28%"><input type="text" name="user_email" id="user_email", value='{{user_email}}' size="20"></td>
+                <td><span class="error">{{email_error}}</span>
+                </td>
+            </label></p>
+        </tr>
+        <tr>
+            <div class="button_box"><p><td><br><input type="submit" value="Sign Up Now!"></td></p></div>
+        </tr>
+</form>
+</div>
+
+{% endblock %}
