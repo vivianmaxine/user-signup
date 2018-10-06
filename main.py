@@ -17,7 +17,7 @@ app.config['DEBUG'] = True
 @app.route('/', methods=['GET'])
 def display_form():
     template = jinja_env.get_template('user-signup.html')
-    return template.render()
+    return template.render(title="User Sign-up")
 
 
 # Processes user sign-up page
@@ -98,6 +98,6 @@ def welcome_message():
 
     template = jinja_env.get_template('welcome.html')
     return template.render(
-        user_name=user_name)
+        user_name=user_name, title="Welcome!")
 
 app.run()
